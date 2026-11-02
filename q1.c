@@ -227,6 +227,35 @@ int main(void)
 	}
 	
 	//print the grid ////////////////////////////////////////////////////////////////////     TODO       ///////////////////////////////////////////////////////
+	for (i = 0; i < k; i++)
+	{
+		array[selected_row][selected_seat + i] = 1;
+	}
+	
+	printf("\n   \t");
+	for (i = 0; i < seats; i++)
+	{
+		printf("%d ", i);
+	}
+	
+	printf("\n");
+	
+	for (i = 0; i < rows; i++)
+	{
+		printf("r%d \t", i);
+		for (j = 0; j < seats; j++)
+		{
+			if (array[i][j] == 1)
+			{
+				printf("x ");
+			}
+			else
+			{
+				printf("_ ");
+			}
+		}
+		printf("\n");
+	}
 	return 0;
 }
 
